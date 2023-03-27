@@ -4,16 +4,7 @@ const url = 'https://2u-data-curriculum-team.s3.amazonaws.com/dataviz-classroom/
 // d3.json(url).then((data)=>console.log(data));
 
 // ----------------------------------------------------------------
-  
-//   // Call updatePlotly() when a change takes place to the DOM
-//   d3.selectAll("#selDataset").on("change", updatePlotly);
-  
-//   // This function is called when a dropdown menu item is selected
-//   function updatePlotly() {
-//     // Use D3 to select the dropdown menu
-//     let dropdownMenu = d3.select("#selDataset");
-//     // Assign the value of the dropdown menu option to a variable
-//     let dataset = dropdownMenu.property("value");
+
 
 // // Create a horizontal bar chart and a bubble chart, you'll be using the same variables, so create one function that will create both charts
 
@@ -54,7 +45,7 @@ function createCharts(sampleData){
     // Use sample_values for the y values.
     // Use sample_values for the marker size.
     // Use otu_ids for the marker colors.
-    Use otu_labels for the text values.
+    // Use otu_labels for the text values.
         let bubTrace = {
             x: otu_ids,
             y: sample_values,
