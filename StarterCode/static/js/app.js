@@ -4,42 +4,57 @@ const url = 'https://2u-data-curriculum-team.s3.amazonaws.com/dataviz-classroom/
 d3.json(url).then((data)=>console.log(data));
 
 // ----------------------------------------------------------------
-// 2. Create a horizontal bar chart with a dropdown menu to display the top 10 OTUs found in that individual.
-    
-// function barChart(){
-//     // Create dropdow menu
-//     let dropdownMenu = d3.select('#selDataset'); 
+// Create a horizontal bar chart and a bubble chart, you'll be using the same variables, so create one function that will create both charts
 
-//     // Assign the data
-//     d3.json(url).then((importedData)=> {
-//         let data=importedData;
-//     });
+function createCharts(sampleData){
 
-//     console.log(data)
-    // // Use sample_values as the values for the bar chart.
+    // // Define sample_values
     // let sample_values = Object.values(data.samples)
 
-    // // Use otu_ids as the labels for the bar chart.
+    // // Define otu_ids
     // let otu_ids = Object.keys(data.names)
 
-    // // Use otu_labels as the hovertext for the chart.
+    // // Define otu_labels as the hovertext
     // let otu_labels = Object.keys(data.names)
+}
 
-    // Plotly.newPlot('bar', data)
-// };
+// 2. Horizontal bar chart with a dropdown menu to display the top 10 OTUs found in that individual.
+//     let barTrace = {
+//         x: otu_ids,
+//         y: sample_values,
+//         type: 'bar',
+//         orientation: 'h',
+//          showlegend: true 
+//     };
 
-// ----------------------------------------------------------------
-// 3. Create a bubble chart that displays each sample.
+//     let barLayout = {
+//         title: "Top 10 OTUs Found in Individual"
+//     };
+
+//     Plotly.newPlot('bar', barTrace, barLayout)
+
+// Bubble chart that displays each sample.
 
 // Use otu_ids for the x values.
-
 // Use sample_values for the y values.
-
 // Use sample_values for the marker size.
-
 // Use otu_ids for the marker colors.
-
 // Use otu_labels for the text values.
+    // let bubTrace = {
+    //     x: otu_ids,
+    //     y: sample_values,
+    //     mode: 'markers',
+    //     marker: {
+    //         size: sample_values,
+    //         color: otu_ids
+    //     }
+    // };
+
+    // let bubLayout = {
+    //     title: "All Samples"
+    // };
+
+    // Plotly.newPlot('bubble', bubTrace, bubLayout)
 
 // ----------------------------------------------------------------
 // 4. Display the sample metadata, i.e., an individual's demographic information.
