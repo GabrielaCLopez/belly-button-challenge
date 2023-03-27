@@ -4,7 +4,18 @@ const url = 'https://2u-data-curriculum-team.s3.amazonaws.com/dataviz-classroom/
 // d3.json(url).then((data)=>console.log(data));
 
 // ----------------------------------------------------------------
-// Create a horizontal bar chart and a bubble chart, you'll be using the same variables, so create one function that will create both charts
+  
+//   // Call updatePlotly() when a change takes place to the DOM
+//   d3.selectAll("#selDataset").on("change", updatePlotly);
+  
+//   // This function is called when a dropdown menu item is selected
+//   function updatePlotly() {
+//     // Use D3 to select the dropdown menu
+//     let dropdownMenu = d3.select("#selDataset");
+//     // Assign the value of the dropdown menu option to a variable
+//     let dataset = dropdownMenu.property("value");
+
+// // Create a horizontal bar chart and a bubble chart, you'll be using the same variables, so create one function that will create both charts
 
 function createCharts(sampleData){
     const url = 'https://2u-data-curriculum-team.s3.amazonaws.com/dataviz-classroom/v1.1/14-Interactive-Web-Visualizations/02-Homework/samples.json'
@@ -62,10 +73,6 @@ function createCharts(sampleData){
     });
 }
 
-
-
-
-
 // ----------------------------------------------------------------
 // 4. Display the sample metadata, i.e., an individual's demographic information.
 
@@ -75,19 +82,13 @@ function createCharts(sampleData){
 
 // ----------------------------------------------------------------
 // 6. Update all the plots when a new sample is selected. Additionally, you are welcome to create any layout that you would like for your dashboard. An example dashboard is shown as follows:
+// Create the dropdown menu
+// function init() {
+//     let dropdownMenu = d3.select("#selDataset");
 
-
+//     // You need to add data to the dropdown menu
+//     d3.json(url).then((data)=> {
+//         let sample_ids = data.names;
+//     })   
+// }
 // init();
-
-	
-
-
- 
-
-
-
-
-
-
-
-
