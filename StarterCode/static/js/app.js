@@ -9,7 +9,7 @@ d3.json(url).then((data)=>console.log(data));
 // Create a horizontal bar chart using sample_values as the values for the bar chart, otu_ids as the labels for the bar chart.
 // Use otu_labels as the hovertext for the chart.
 
-function createBarchart (sampleData){
+function createCharts (sampleData){
     // You want to retrieve the data so you can assign variables
     d3.json(url).then((data)=> {
         let samples=data.samples;
@@ -31,8 +31,7 @@ function createBarchart (sampleData){
         x: sample_values.slice(0,10).reverse(),
         text: otu_labels.slice(0,10).reverse(),
         type: 'bar',
-        orientation: 'h',
-        showlegend: true 
+        orientation: 'h'
     }];
 
     let barLayout = {
@@ -40,35 +39,35 @@ function createBarchart (sampleData){
     };
 
     Plotly.newPlot('bar', barTrace, barLayout)
+   
+
+    // Create a bubble chart that displays each sample
+    // Use otu_ids for the x values.
+    // Use sample_values for the y values.
+    // Use sample_values for the marker size.
+    // Use otu_ids for the marker colors.
+    // Use otu_labels for the text values.
+
+    let bubTrace = [{
+        x: otu_ids,
+        y: sample_values,
+        mode: 'markers',
+        text: otu_labels,
+        marker: {
+            size: sample_values,
+            color: otu_ids,
+            colorscale: 'Jet'
+            }
+        }];
+
+    let bubLayout = {
+        title: "Belly Button Diversity"
+    };
+
+    Plotly.newPlot('bubble', bubTrace, bubLayout)
     });
-}
 
-// // Create a bubble chart that displays each sample
-// // Use otu_ids for the x values.
-// // Use sample_values for the y values.
-// // Use sample_values for the marker size.
-// // Use otu_ids for the marker colors.
-// // Use otu_labels for the text values.
-
-// function createBubblechart(sampleData){
-
-//     let bubTrace = {
-//         x: otu_ids,
-//         y: sample_values,
-//         mode: 'markers',
-//         marker: {
-//             size: sample_values,
-//             color: otu_ids
-//         }
-//     };
-
-// let bubLayout = {
-//     title: "All Samples"
-// };
-
-// Plotly.newPlot('bubble', bubTrace, bubLayout)
-// });
-// }
+};
     
 // // ----------------------------------------------------------------
 // Display the sample metadata, i.e., an individual's demographic information.
@@ -92,7 +91,7 @@ function createMetadata(sampleData){
 
 function optionChanged(newSample){
     createMetadata(newSample);
-    createBarchart(newSample);
+    createCharts(newSample);
 }
 
 // // ----------------------------------------------------------------
@@ -115,7 +114,7 @@ function init() {
         })
         let firstSample = sample_ids[0];
         createMetadata(firstSample);
-        createBarchart(firstSample);
+        createCharts(firstSample);
     })   
 }
 init();
