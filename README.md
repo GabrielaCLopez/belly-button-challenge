@@ -1,6 +1,8 @@
-#Belly Button Challenge
+# Belly Button Challenge
 
-##Background
+![](Screenshots/overView.png)
+
+## Background
 You will build an interactive dashboard to explore the Belly Button Biodiversity dataset, which catalogs the microbes that colonize human navels. 
 
 The dataset reveals that a small handful of microbial species (also called operational taxonomic units, or OTUs, in the study) were present in more than 70% of people, while the rest were relatively rare.
@@ -14,6 +16,7 @@ The dataset reveals that a small handful of microbial species (also called opera
     - use otu_labels as the hovertext
     
     Your bar chart should look like:
+    
     ![](Screenshots/barChart.png)
     
 3. Create a bubble chart that displays all of the bacteria found in each sample.
@@ -25,7 +28,11 @@ The dataset reveals that a small handful of microbial species (also called opera
     
     Your bubble chart should look like:
     
+    ![](Screenshots/bubbleChart.png)
+    
 4. You will need to display the metadata for each individual:
+
+![](Screenshots/metaData.png)
 
 5. All of the plots will need to update when a new sample is selected.
     - Create a function that will display both the bubble chart and bar chart when sample is changed. 
