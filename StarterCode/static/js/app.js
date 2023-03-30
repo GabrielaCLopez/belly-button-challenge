@@ -118,3 +118,5 @@ function init() {
     })   
 }
 init();
+
+// Bonus gauge function
