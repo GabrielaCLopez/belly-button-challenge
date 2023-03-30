@@ -14,6 +14,7 @@ The dataset reveals that a small handful of microbial species (also called opera
     - use otu_labels as the hovertext
     
     Your bar chart should look like:
+    ![](Screenshots/barChart.png)
     
 3. Create a bubble chart that displays all of the bacteria found in each sample.
     - Use otu_ids for the x values
