@@ -1,5 +1,7 @@
 # Belly Button Challenge
 
+### Link to dashboard: https://gabrielaclopez.github.io/belly-button-challenge/
+
 ![](Screenshots/overView.png)
 
 ## Background
