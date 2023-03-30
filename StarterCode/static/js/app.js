@@ -119,4 +119,18 @@ function init() {
 }
 init();
 
-// Bonus gauge function
+// // Gauge Function
+
+// function guageChart(){
+//     let wfreq = data.metadata.wfreq;
+//     let arraySample=metadata.filter(sampleObj => sampleObj.id == sampleData);
+//     let result = arraySample[0];
+
+//     let gaugeTrace = go.Figure(go.Indicator(
+//         mode = "gauge+number",
+//         value = wfreq,
+//         domain = {'x': [0, 1], 'y': [0, 1]},
+//         title = {'text': "Wash Frequency"}))
+
+// }
+
